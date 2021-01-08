@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142" height="92" viewBox="0 0 142 92">
+    <defs>
+        <style>
+            .cls-1,.cls-4{fill:none}.cls-1{stroke:#f50514}.cls-2{fill:#f50514}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="Group_342" transform="translate(-1028 -328)">
+        <g id="Rectangle_211" class="cls-1" transform="translate(1077 328)">
+            <rect width="44" height="44" class="cls-3" rx="8"/>
+            <rect width="43" height="43" x=".5" y=".5" class="cls-4" rx="7.5"/>
+        </g>
+        <g id="Rectangle_212" class="cls-1" transform="translate(1028 376)">
+            <rect width="44" height="44" class="cls-3" rx="8"/>
+            <rect width="43" height="43" x=".5" y=".5" class="cls-4" rx="7.5"/>
+        </g>
+        <g id="Rectangle_213" class="cls-1" transform="translate(1077 376)">
+            <rect width="44" height="44" class="cls-3" rx="8"/>
+            <rect width="43" height="43" x=".5" y=".5" class="cls-4" rx="7.5"/>
+        </g>
+        <g id="Rectangle_214" class="cls-1" transform="translate(1126 376)">
+            <rect width="44" height="44" class="cls-3" rx="8"/>
+            <rect width="43" height="43" x=".5" y=".5" class="cls-4" rx="7.5"/>
+        </g>
+        <path id="Polygon_3" d="M4 0l4 6.4H0z" class="cls-2" transform="translate(1095 347)"/>
+        <path id="Polygon_4" d="M4 0l4 6.4H0z" class="cls-2" transform="rotate(180 551.5 200.7)"/>
+        <path id="Polygon_5" d="M4 0l4 6.4H0z" class="cls-2" transform="rotate(90 378.6 772.8)"/>
+        <path id="Polygon_6" d="M4 0l4 6.4H0z" class="cls-2" transform="rotate(-90 724.6 -322.4)"/>
+    </g>
+</svg>

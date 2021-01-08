@@ -1,0 +1,62 @@
+@import './mixin';
+@import './fonts';
+@import './common';
+@import './header';
+@import './share';
+@import './new';
+* {
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'OnePlusSansText';
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) *100);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.opsD {
+  font-family: 'OnePlusSansDisplay';
+}
+.opsT {
+  font-family: 'OnePlusSansText';
+}
+
+.cookieAlert {
+	position: fixed;
+	z-index: 3;
+	bottom: 0;
+  width: 100%;
+  margin:auto;
+	height: 80px;
+	background-color: #000;
+	border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  left:0;
+  right: 0;
+  font-size: calc-rem(12);
+  padding: 30px 20px 0;
+  line-height: 1;
+  @include breakpoint-min(calc-rem(768)) {
+    width: 80%;
+  }
+  @include breakpoint-min(calc-rem(996)) {
+    width: 60%;
+  }
+
+  & .cookieClose {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: calc-rem(24);
+  }
+}

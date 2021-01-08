@@ -1,0 +1,384 @@
+@font-face {
+	font-family: 'OnePlusFont';
+	src: url('./styles/components/fonts/OnePlusSansText-55Rg.ttf')
+  }
+
+html,body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#canvasWrapper canvas{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+	cursor: grab;
+	
+}
+
+a {
+	color: #ff0;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+canvas {
+	display: block;
+	position:fixed;
+	top:0;
+	font-family: 'OnePlusFont';
+	
+}
+
+
+
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+a, button, input, select {
+	pointer-events: auto;
+}
+
+.dg.ac {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 2 !important; /* TODO Solve this in HTML */
+}
+
+#overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.7);
+}
+
+	#overlay button {
+		background: #ffffff;
+		border: 0;
+		color: #000000;
+		padding: 16px 20px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+#js-circle{
+	display:none
+	
+}
+
+#js-circle-thumb{
+	display:none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+	#js-circle{
+		display:block;
+		position:fixed;
+		bottom:200px; 
+		width:80px; 
+		height:80px; 
+		/* background:rgba(126, 126, 126, 0.5);  */
+		border:1px solid rgba(255,255,255,0.6)  ; 
+		border-radius:50%; 
+		left:25%; 
+		transform:translateX(-50%);
+		transition:100ms;
+		
+	}
+	
+	#js-circle-thumb{
+		display:block;
+		position: absolute; 
+		left: 20px; 
+		top: 20px; 
+		width: 40px; 
+		height: 40px; 
+		border-radius: 50%; 
+		background: rgba(255,255,255,0.6) ;
+		backdrop-filter: blur(2px);
+	}
+	#js-circle2{
+		display:block;
+		position:fixed;
+		bottom:200px; 
+		width:80px; 
+		height:80px; 
+		/* background:rgba(126, 126, 126, 0.5);  */
+		border:1px solid rgba(255,255,255,0.6)  ; 
+		border-radius:50%; 
+		right:25%; 
+		transform:translateX(50%);
+		transition:100ms;
+		
+	}
+}
+
+@media (hover: none) and (pointer: coarse) and  (orientation:landscape) {
+
+	#js-circle{
+		bottom:80px;
+		
+	}
+	
+	#js-circle2{
+		bottom:80px;
+		
+	}
+}
+
+
+
+.countdown{
+	/* background-color:#001eff; */
+	color:#f2f0fa;
+	font-size:1px;
+	/* height:10px; */
+}
+
+#hopin{
+	outline:none;
+	border:none;
+	position:fixed;
+	width:130px;
+	height:40px;
+	background-color:red;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	font-size:18px;
+	color:#fff;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-family: 'Poppins', sans-serif;
+}
+
+#joinProvateWorld-btn{
+	outline:none;
+	border:none;
+	position:fixed;
+	width:130px;
+	height:40px;
+	background-color:red;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	font-size:18px;
+	color:#fff;
+	top:70%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-family: 'Poppins', sans-serif;
+}
+
+#name-input{
+	outline:none;
+	border:none;
+	width:300px;
+	position: fixed;
+	background-color:rgba(255,255,255,0.8);
+	top:40%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	height:40px;
+	font-size:18px;
+	color:#333;
+	padding:10px;
+	box-sizing: border-box;
+	border-bottom:2px solid red;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+
+}
+
+#name-input::placeholder{
+	color:#999;
+	
+}
+
+#teleport-alert{
+	width:500px;
+	height:300px;
+	border-radius: 20px;
+	display:none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color:#333;
+	background-color: #fff;
+	box-shadow:0px 0px 20px 0px rgba(255,255,255,0.3);
+	z-index:100;
+	position: fixed;
+	top:50%;
+	overflow: hidden;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+#teleport-msg{
+	width:100%;
+	font-size: 25px;
+	box-sizing: border-box;
+	text-align: center;
+	
+}
+
+#teleport-btn-container{
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	padding:40px;
+	box-sizing: border-box;
+	justify-content: space-between;
+
+}
+
+#teleport-btn{
+	border:0;
+	outline:0;
+	width:80px;
+	height:30px;
+	font-size:15px;
+	font-weight: bold;
+	color:#fff;
+	background-color: red;
+	border-radius: 10px;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+	
+}
+
+
+
+
+
+
+/* pong game css */
+
+#pong-scene, canvas {
+    position: absolute;
+    width: 100%;
+	height: 100vh;
+}
+
+canvas:focus {
+    outline: none;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+
+#loadingScreen, #result {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000e6;
+}
+
+#switch-instruction {
+    display: none;
+}
+
+#modal {
+    margin: 50px;
+    text-align: center;
+	background-color: white;
+	color:#000;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0 0 20px 0 gray;
+}
+
+#modal h1 {
+    margin-top: 0;
+}
+
+#modal h4 {
+    margin-bottom: 0;
+}
+
+#modal p {
+    margin-top: 5px;
+}
+
+#modal a, #replay-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #6814b5;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+
+#switch-instruction {
+    color: white;
+    margin: 20px;
+    text-align: center;
+}

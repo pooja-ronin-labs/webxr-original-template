@@ -1,0 +1,36 @@
+$text__size--default: 16;
+
+@function calc-rem($target) {
+  @return ($target / $text__size--default) * 1rem;
+}
+@function calc-em($target, $context: $text__size--default) {
+  @return ($target / $context) * 1em;
+}
+@mixin breakpoint-min($point){
+  @media only screen and (min-width: $point) { @content ; }
+   /*@media only screen (min-width:$point){@content;}*/
+}
+@mixin breakpoint-max($point){
+   @media only screen and (max-width:$point){@content;}
+}
+
+@mixin breakpoint-range($point1,$point2){
+   @media only screen and (min-width:$point1) and (max-width:$point2){@content;}
+}
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+      @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+      @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+      @content;
+  }
+
+  &:-ms-input-placeholder {
+      @content;
+  }
+}

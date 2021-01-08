@@ -1,0 +1,12 @@
+.navWrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  position: absolute;
+  background: #000;
+  z-index: 1;
+  & li {
+    margin-right: 10px;
+  }
+}

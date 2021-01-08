@@ -1,0 +1,240 @@
+#canvasWrapper canvas{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+body {
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-size: 13px;
+	line-height: 24px;
+	overscroll-behavior: none;
+	cursor: grab;
+	
+}
+
+
+
+a {
+	color: #ff0;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+canvas {
+	display: block;
+	position:fixed;
+	top:0;
+	font-family: 'OnePlusFont';
+}
+
+#info {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1; /* TODO Solve this in HTML */
+}
+
+a, button, input, select {
+	pointer-events: auto;
+}
+
+.dg.ac {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 2 !important; /* TODO Solve this in HTML */
+}
+
+
+#overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.7);
+}
+
+	#overlay button {
+		background: #ffffff;
+		border: 0;
+		color: #000000;
+		padding: 16px 20px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.footerProfileImage {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(45deg, #0a23fb, #f50514);
+	position: relative;
+	& .olStatus {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 50%;
+		animation: pulse-animation 2s infinite linear;
+		&.ol {
+			background-color: green;
+		}
+		&.ofl {
+			background-color: #f50514;
+		}
+	}
+	& img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: contain;
+	}
+	@include breakpoint-min(calc-rem(768)){
+	  width: 50px;
+	  height: 50px;
+	}
+}
+
+@keyframes pulse-animation {
+	0% { -webkit-transform: scale(1); }
+	25% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2) }
+    75% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1); }
+}
+
+#hopin{
+	outline:none;
+	border:none;
+	position:fixed;
+	width:130px;
+	height:40px;
+	background-color:red;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	font-size:18px;
+	color:#fff;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	font-family: 'Poppins', sans-serif;
+}
+
+#name-input{
+	outline:none;
+	border:none;
+	width:300px;
+	position: fixed;
+	background-color:rgba(255,255,255,0.8);
+	top:40%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	height:40px;
+	font-size:18px;
+	color:#333;
+	padding:10px;
+	box-sizing: border-box;
+	border-bottom:2px solid red;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+
+}
+
+#name-input::placeholder{
+	color:#999;
+	
+}
+
+#teleport-alert{
+	width:500px;
+	height:300px;
+	border-radius: 20px;
+	display:none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color:#333;
+	background-color: #fff;
+	box-shadow:0px 0px 20px 0px rgba(255,255,255,0.3);
+	z-index:100;
+	position: fixed;
+	top:50%;
+	overflow: hidden;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+#teleport-msg{
+	width:100%;
+	font-size: 25px;
+	box-sizing: border-box;
+	text-align: center;
+	
+}
+
+#teleport-btn-container{
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	padding:40px;
+	box-sizing: border-box;
+	justify-content: space-between;
+
+}
+
+#teleport-btn{
+	border:0;
+	outline:0;
+	width:80px;
+	height:30px;
+	font-size:15px;
+	font-weight: bold;
+	color:#fff;
+	background-color: red;
+	border-radius: 10px;
+	box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+	
+}
+video::-internal-media-controls-overlay-cast-button {
+	display: none;
+}
+
+
+
+
+

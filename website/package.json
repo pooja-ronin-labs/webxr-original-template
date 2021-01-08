@@ -1,0 +1,88 @@
+{
+  "name": "rndreact",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@seregpie/three.text-sprite": "^2.0.0",
+    "@seregpie/three.text-texture": "^3.2.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@tweenjs/tween.js": "^18.6.0",
+    "axios": "^0.20.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "cannon": "^0.6.2",
+    "cryptr": "^6.0.2",
+    "env-cmd": "^10.1.0",
+    "framer-motion": "^2.7.2",
+    "gsap": "^3.5.1",
+    "https-localhost": "^4.6.3",
+    "install": "^0.13.0",
+    "janus-gateway-js": "^2.0.2",
+    "jszip": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "npm": "^6.14.8",
+    "phaser": "^3.24.1",
+    "qs": "^6.9.4",
+    "react": "^16.13.1",
+    "react-device-detect": "^1.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.1.2",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-script-tag": "^1.1.2",
+    "react-scripts": "3.4.3",
+    "react-unity-webgl": "^8.0.1",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.1.3",
+    "reset-css": "^5.0.1",
+    "socket.io": "^2.3.0",
+    "socket.io-encrypt": "^0.2.1",
+    "styled-components": "^5.2.0",
+    "three": "^0.120.1",
+    "three-ik": "^0.1.0",
+    "three-spritetext": "^1.5.2",
+    "three.interaction": "^0.2.3",
+    "webrtc-adapter": "^7.7.0"
+  },
+  "scripts": {
+    "start": " react-scripts start",
+    "build:production": "env-cmd -f .env.production react-scripts build",
+    "build:development": "env-cmd -f .env.development react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean": "rm -r -f build",
+    "dev_aws_sync": "AWS_REGION=ap-south-1  AWS_ACCESS_KEY_ID=AKIAVF774A4EQOWEX5XK AWS_SECRET_ACCESS_KEY=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 aws s3 sync build s3://dev-whichwayword/",
+    "prod_aws_sync": "AWS_REGION=ap-south-1  AWS_ACCESS_KEY_ID=AKIAVF774A4EQOWEX5XK AWS_SECRET_ACCESS_KEY=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 aws s3 sync build s3://prod-react-theoneplusworld/",
+    "dev_aws_upload": "npm run clean && npm run build:development && npm run dev_aws_sync",
+    "prod_aws_upload": "npm run clean && npm run build:production && npm run obfuscate && npm run prod_aws_sync",
+    "obfuscate": "javascript-obfuscator ./build --output ./build/obfuscated && cp -r ./build/obfuscated/* ./build/ && rm -r ./build/obfuscated",
+    "gltf_compress": "babel-node glb_compress/gltf_compress.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/node": "^7.10.5",
+    "compress-images": "^1.9.5",
+    "gltf-pipeline": "^3.0.0",
+    "javascript-obfuscator": "^2.5.0",
+    "s3-deploy": "^1.4.0"
+  }
+}

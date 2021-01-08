@@ -1,0 +1,48 @@
+@import '../../assets/style/mixin';
+.sectionHeader {
+  color: #f50514;
+  font-size: calc-rem(25);
+  padding: 15px;
+  overflow:auto;
+  line-height: 1;
+  letter-spacing: normal;
+  border-bottom: 1px solid #d6d3e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f0fa;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  & .back {
+    width: 14px;
+    height: 14px;
+    border: 2px solid red;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(45deg); 
+    display: block;
+    margin-right: 20px;
+  }
+
+  @include breakpoint-min(calc-rem(768)) {
+    font-size: calc-rem(35);
+  }
+  @include breakpoint-min(calc-rem(996)) {
+    font-size: calc-rem(45);
+  }
+
+  & .closeBtn {
+    font-size: calc-rem(30);
+    @include breakpoint-min(calc-rem(996)) {
+      font-size: calc-rem(45);
+    }
+  }
+
+  &.menuSectionHeader{
+    @include breakpoint-min(calc-rem(768)) {
+      font-size: calc-rem(30);
+    }
+  }
+}

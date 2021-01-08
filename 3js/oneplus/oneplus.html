@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>kabab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+	<link type="text/css" rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./mediaelementplayer.css" />
+	<style>
+		body {
+			background-color: #bfe3dd;
+			color: #000;
+			overflow: hidden;
+		}
+		.container {
+			overflow-y: hidden;
+		}
+		
+
+		a {
+			color: #2983ff;
+		}
+		#overlay {
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			background: #000000;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+		#overlay button#enterBtn {
+			border: 2px solid #eb2814;
+			background: #fff;
+			border-radius: 5px;
+		}
+		pre {
+			display: none;
+		}
+	</style>>
+	
+	<script type="text/javascript" src="multiplayer/3rdparty/easeljs.min.js"></script>
+    <script type="text/javascript" src="multiplayer/Photon/3rdparty/swfobject.js"></script>
+    <script type="text/javascript" src="multiplayer/Photon/3rdparty/web_socket.js"></script>
+    <!--lib--><script type="text/javascript" src="multiplayer/Photon/Photon-Javascript_SDK.js"></script>
+    <!--info (optional)--><script type="text/javascript" src="multiplayer/cloud-app-info.js"></script>
+    <script type="text/javascript" src="multiplayer/MultiplayerHandler.js"></script>
+	<script type="text/javascript" src="multiplayer/master-client.js"></script>
+	<script src="../build/three.min.js"></script>
+	<script src="./game/mediaelement-and-player.min.js"></script>
+	<!-- <script src="./js/controls/PointerLockControls.js" ></script> -->
+    <script type="text/javascript">
+        WEB_SOCKET_SWF_LOCATION = "multiplayer/Photon/3rdparty/WebSocketMain.swf";
+        // Set this to dump debug message from Flash to console.log:
+        WEB_SOCKET_DEBUG = false;
+    </script>
+</head>
+
+<body>
+	<div id="overlay">
+		<button id="enterBtn">Enter the 3D world</button>
+	</div>
+	<div id="container"></div>
+	<input id="name-input" type="text" placeholder="Enter Name">
+	<button id="hopin" >Start</button>
+	<!-- <div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> webgl - animation - keyframes<br />
+		Model: <a href="https://www.artstation.com/artwork/1AGwX" target="_blank" rel="noopener">Littlest Tokyo</a> by
+		<a href="https://www.artstation.com/glenatron" target="_blank" rel="noopener">Glen Fox</a>, CC Attribution.
+	</div> -->
+	<!-- <div>
+		<button id="connect">Connect to the game</button>
+	</div> -->
+	<script>
+		const overlay = document.querySelector('#overlay');
+		document.querySelector('#enterBtn').addEventListener('click', function() {
+			overlay.style.display = 'none';
+		})
+		document.querySelector('#container').style.height = window.innerHeight;
+	</script>
+	<script type="module" src="./game/main.js" ></script>
+
+</body>
+
+</html>

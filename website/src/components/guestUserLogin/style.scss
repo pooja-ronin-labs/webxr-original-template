@@ -1,0 +1,32 @@
+.tempLoginWrapper {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+
+  & > div {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    & input {
+      border: 1px solid red;
+      padding: 10px;
+      border-radius: 4px;
+      color: #000;
+    }
+
+    & button {
+      border: 1px solid red;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  }
+}

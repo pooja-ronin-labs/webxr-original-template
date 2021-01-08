@@ -1,0 +1,333 @@
+body, html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh)*100);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: HaasGrotDispR-45;;
+  src: url('../fonts/NeueHaasGrotDispRound-45Light.otf');
+}
+@font-face {
+  font-family:HaasGrotDispR-55Roman;
+  src: url('../fonts/NeueHaasGrotTextRound-55Roman.otf');
+}
+* {
+  box-sizing: border-box;
+}
+.welcome-wrapper {
+  background-image: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.next-button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+}
+.img-button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.next-button-wrapper .btnClass {
+  flex: 0 0 100%;
+  margin-bottom: 15px;
+  height: 45px;
+  background-color: black;
+  margin-bottom: 0;
+  display: block;
+  
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.88px;
+  text-align: center;
+  color: #00b2d2;
+}
+.next-button-wrapper .countine {
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  // flex: 0 0 100%;
+  // margin-bottom: 15px;
+  // height: 45px;
+  // background-color: black;
+  // margin-bottom: 0;
+  // display: block;
+  // margin: 20px 0;
+  // text-align: center;
+  // border-radius: 0;
+  // text-decoration: none;
+  // font-family: HaasGrotDispR-55Roman;
+  // font-size: 14px;
+  // font-weight: normal;
+  // font-stretch: normal;
+  // font-style: normal;
+  // line-height: normal;
+  // letter-spacing: 0.88px;
+  // text-align: center;
+  // color: #ffffff;
+  
+}
+.next-button-wrapper .blackbtn {
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+.welcome-wrapper{
+  // width: 360px;
+  // margin: auto;
+}
+.logo-section{
+  width: 28px;
+  height: 28px;
+  position: fixed;
+  top:14px;
+ 
+  z-index: 150;
+}
+.welcome-wrapper .para{
+
+  font-family: HaasGrotDispR-55Roman;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: 1px;
+  color: #181818;
+}
+.black-border{
+ border: 15px solid black;
+}
+.welcome-wrapper h1{
+color: #00b2d2;
+  font-family: HaasGrotDispR-55Roman;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.13;
+  letter-spacing: 0.6px;
+  background-image: linear-gradient(to right, #23718c, #00b2d2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+#welcome-start-screen {
+  padding: 20px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh)*100);
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.input-section{
+  margin-top: 50px;
+}
+.input-section input {
+  outline: 0;
+  border-width: 0px 0 1px;
+  border-color: #23718c;
+  width: 100%;
+  text-align: center;
+  /* border: solid 1px #23718c; */
+  font-family: HaasGrotDispR-45;
+  font-size: 30px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #23718c !important;
+  background-color: transparent;
+}
+.input-section input:focus {
+  border-color: green
+}
+.color-div{
+  text-align: center;
+  color: #00b2d2 !important;
+}
+.welcomeWrapper{
+    margin-top: 43px;;
+}
+.checkbox-div{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.checkbox-div .check-div{
+    width: auto;
+}
+
+#info-div-section{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+}
+.puzzle-screen{
+    text-align: center;
+}
+.image-container>div {
+  display: flex;
+  width: 15.2%;
+  justify-content: space-around;
+  margin: 2%;
+  align-items: center;
+}
+.image-container
+{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bitmap-screen{
+  width: 124px;
+  height: 123px;
+  //background-color: black;
+  margin: auto;
+  margin-top: 66px;
+  margin-bottom: 66px;
+}
+.end-screen-color-div{
+  width: 130px;
+height: 130px;
+  padding: 10px 11px 10px 9px;
+box-shadow: inset 0 0 19px 7px #38ecff;
+background-color: #38ecff;
+margin: auto;
+margin-bottom: 39%;
+
+}
+.node-oneplus{
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  // padding-bottom: 10%;
+  // padding-top: 25%;
+}
+.instagram-form label{
+  font-family: HaasGrotDispR-55Roman;
+font-size: 14px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.14;
+letter-spacing: 0.96px;
+color: #181818;
+padding-left: 3%;
+}
+.instagram-form label a{
+  color: black;
+}
+.node-oneplus img{
+  width: 33px;
+  height: 33px;
+}
+form label{
+  font-family: HaasGrotDispR-55Roman;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: 0.96px;
+  color: #181818;
+}
+.what-is-node{
+  margin-top: 96px;
+}
+.error-msg{
+  font-family: HaasGrotDispR-55Roman;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.33;
+letter-spacing: 1px;
+color: #ff0000;
+}
+.learn-more-wrapper{
+  color: black;
+  text-align: center;
+}
+
+.next-button-wrapper .learn-more:focus{
+outline: 0;
+}
+.next-button-wrapper .learn-more{
+  flex: 0 0 100%;
+  margin-bottom: 15px;
+  height: 45px;
+   background-color: transparent; 
+   border: none;
+  margin-bottom: 0;
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.88px;
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+}
+.white-color-div{
+background-color: white;
+padding: 5%;
+}
+@media only screen and (min-width: 768px){
+#welcome-wrapper {
+  width: 500px;
+}
+}
+.info {
+  position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    right: 10px;
+    bottom: 10px;
+    font-weight: 900;
+}
